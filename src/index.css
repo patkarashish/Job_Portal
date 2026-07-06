@@ -67,11 +67,9 @@
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
   body {
-    @apply bg-background text-foreground;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
   }
 }
 
@@ -79,7 +77,9 @@
   .gradient {
     @apply bg-gradient-to-br from-gray-500 via-gray-200 to-white;
   }
-  .gradient-title {
-    @apply gradient text-transparent bg-clip-text;
-  }
+}
+
+
+.gradient-title {
+  @apply bg-gradient-to-br from-gray-500 via-gray-200 to-white text-transparent bg-clip-text;
 }
